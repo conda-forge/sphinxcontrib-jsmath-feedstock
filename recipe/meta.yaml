@@ -5,25 +5,26 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/s/sphinxcontrib-jsmath/sphinxcontrib-jsmath-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/s/sphinxcontrib-jsmath/sphinxcontrib-jsmath-{{ version }}.tar.gz
   sha256: a9925e4a4587247ed2191a22df5f6970656cb8ca2bd6284309578f2153e0c4b8
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: "{{ PYTHON }} -m pip install . --no-deps -vv"
 
 requirements:
   host:
-    - python >=3.5
+    - python {{ python_min }}
     - pip
   run:
-    - python >=3.5
+    - python >={{ python_min }}
 
 test:
   requires:
     # This is a circular dependency b/c sphinx depends on this package now :-/
     - sphinx >=2
+    - python {{ python_min }}
   imports:
     - sphinxcontrib
     - sphinxcontrib.jsmath
