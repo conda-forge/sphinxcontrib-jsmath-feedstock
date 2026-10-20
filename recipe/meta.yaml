@@ -1,15 +1,15 @@
-{% set version = "1.0.1" %}
+{% set version = "2.0.0" %}
 
 package:
   name: sphinxcontrib-jsmath
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/s/sphinxcontrib-jsmath/sphinxcontrib-jsmath-{{ version }}.tar.gz
-  sha256: a9925e4a4587247ed2191a22df5f6970656cb8ca2bd6284309578f2153e0c4b8
+  url: https://files.pythonhosted.org/packages/source/s/sphinxcontrib-jsmath/sphinxcontrib_jsmath-{{ version }}.tar.gz
+  sha256: 551f780cf9687f9c3c74f0cf9f18aca06e0d6958853453f3803fe4d357c5b924
 
 build:
-  number: 1
+  number: 0
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
 
