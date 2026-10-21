@@ -3,11 +3,11 @@ About sphinxcontrib-jsmath-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/sphinxcontrib-jsmath-feedstock/blob/main/LICENSE.txt)
 
-Home: http://sphinx-doc.org/
+Home: https://www.sphinx-doc.org/
 
 Package license: BSD-2-Clause
 
-Summary: A sphinx extension which renders display math in HTML via JavaScript
+Summary: sphinxcontrib-jsmath is a sphinx extension which renders displayed maths in HTML via JavaScript
 
 Current build status
 ====================
